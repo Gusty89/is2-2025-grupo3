@@ -5,7 +5,7 @@ Este proyecto forma parte del trabajo práctico grupal de la materia **Ingenier�
 ## 👥 Integrantes del grupo
 
 - Gustavo [@gusty89]
-- Alejo [@tuusuario]
+- Alejo [@codex-00]
 - Gonzalo Rosa [@gonzarosa]
 
 ## 🚀 Tecnologías utilizadas
@@ -77,3 +77,4 @@ A partir de la semana 10 se incluirá un entorno dockerizado y flujos automatiza
 ## 📄 Licencia
 
 Uso académico exclusivo. No distribuir sin autorización del equipo.
+
