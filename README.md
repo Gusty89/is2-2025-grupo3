@@ -7,6 +7,8 @@ Este proyecto forma parte del trabajo práctico grupal de la materia **Ingenier�
 - Gustavo [@gusty89]
 - Alejo [@codex-00]
 - Gonzalo Rosa [@gonzarosa]
+- Anabel Cano [@anabel25]
+- Nahuel Lemos [@n-lem]
 
 ## 🚀 Tecnologías utilizadas
 
