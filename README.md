@@ -4,8 +4,8 @@ Este proyecto forma parte del trabajo práctico grupal de la materia **Ingenier�
 
 ## 👥 Integrantes del grupo
 
-- Gustavo [@gusty89]
-- Alejo [@codex-00]
+- Gustavo Paniagua [@gusty89]
+- Alejo Escurra [@codex-00]
 - Gonzalo Rosa [@gonzarosa]
 - Anabel Cano [@anabel25]
 - Nahuel Lemos [@n-lem]
