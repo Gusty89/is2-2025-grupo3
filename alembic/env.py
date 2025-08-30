@@ -5,9 +5,9 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config, pool
 from alembic import context
 from app.db.base import Base
-import app.db.models.usuario
+import app.db.models.UsuarioORM
 import app.db.models.rol
-import app.db.models.usuarioRol
+import app.db.models.UsuarioRolORM
 import app.db.models.producto
 import app.db.models.deposito
 import app.db.models.movimiento

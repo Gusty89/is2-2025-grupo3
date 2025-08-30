@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String # type: ignore
-from sqlalchemy.orm import relationship # type: ignore
+from sqlalchemy import Column, Integer, String
 from app.db.base import Base
 
 class ProductoORM(Base):
@@ -11,5 +10,3 @@ class ProductoORM(Base):
     descripcion = Column(String(255))
     stock = Column(Integer, default=0)
     stock_minimo = Column(Integer, default=0)
-
-    movimientos = relationship("Movimiento", back_populates="producto")

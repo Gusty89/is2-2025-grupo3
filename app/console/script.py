@@ -3,7 +3,7 @@ from app.db.base import Base # type: ignore
 from app.db.session import engine, SessionLocal # type: ignore
 
 # Importar todos los modelos para que se registren en Base.metadata
-from app.db.models.usuario import UsuarioORM
+from app.db.models.UsuarioORM import UsuarioORM
 from app.db.models.rol import RolORM
 from app.db.models.producto import ProductoORM
 from app.db.models.deposito import DepositoORM
