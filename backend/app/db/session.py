@@ -1,14 +1,17 @@
-from sqlalchemy.orm import sessionmaker
-from app.db.engine import engine
+# backend/app/db/session.py
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-# Configuración de la sesión
-SessionLocal = sessionmaker(
-    autocommit=False,
-    autoflush=False,
-    bind=engine
+SQLALCHEMY_DATABASE_URL = "sqlite:///./inventario.db"
+
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 )
 
-# Función de utilidad para obtener la sesión en un contexto "with"
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+
 def get_db():
     db = SessionLocal()
     try:

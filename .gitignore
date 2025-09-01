@@ -1,0 +1,73 @@
+# =========================
+# Entorno virtual y dependencias
+# =========================
+venv/
+.env
+.venv/
+env/
+ENV/
+*.env
+
+# =========================
+# Archivos de Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Archivos de logs y debug
+# =========================
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Archivos temporales del sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Configuración de IDEs
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# Base de datos local
+# =========================
+*.sqlite3
+*.db
+
+# =========================
+# Alembic
+# =========================
+alembic/versions/*.py
+!alembic/versions/__init__.py
+
+# =========================
+# Archivos de compilación
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Cachés y coverage
+# =========================
+.cache/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# Otros
+# =========================
+*.bak
+*.swp
