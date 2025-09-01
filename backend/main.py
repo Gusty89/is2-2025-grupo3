@@ -1,7 +1,13 @@
 from app.db.session import SessionLocal
 from app.db.crud_producto import crear_producto, listar_productos, obtener_producto, actualizar_producto, eliminar_producto
+from app.db.base import Base
+from app.db.engine import engine  # tu engine de SQLAlchemy
+from app.db.models import ProductoORM, MovimientoORM, DepositoORM, UsuarioORM, RolORM
 
 db = SessionLocal()
+
+# Crear tablas
+Base.metadata.create_all(bind=engine)
 
 def menu():
     while True:

@@ -1,9 +1,7 @@
 from sqlalchemy import Column, Integer, String, Table, ForeignKey
 from sqlalchemy.orm import relationship
 from app.db.base import Base
-from app.db.models.usuario import UsuarioORM
 
-# Tabla asociativa Usuario <-> Rol
 usuario_roles = Table(
     "usuario_roles",
     Base.metadata,

@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String
-from app.db.base import Base
 from sqlalchemy.orm import relationship
-from app.db.models.movimiento import MovimientoORM
+from app.db.base import Base
 
 class ProductoORM(Base):
     __tablename__ = "productos"
