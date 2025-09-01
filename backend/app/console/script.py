@@ -1,7 +1,8 @@
+from datetime import datetime
 from app.db.session import SessionLocal
 # Importa solo el modelo ProductoORM
 from app.db.models.producto import ProductoORM
-
+from app.db.models.movimiento import TipoMovimientoORM, MovimientoORM
 
 # 5. Insertar productos de prueba
 
@@ -31,20 +32,43 @@ def insertarProducto():
     finally:
         db.close()
 
-# Este bloque asegura que la función solo se ejecute cuando el archivo se corra directamente
+# --- Inserción de movimiento---
+def insertar_movimiento():
+    db = SessionLocal()
+    try:
+        nuevo_mov = MovimientoORM(
+            #producto_id=1,
+            #deposito_origen_id=None,
+            #deposito_destino_id=2,
+            #usuario_id=1,
+            cantidad=50,
+            fecha=datetime(2024, 9, 1),
+            tipo=TipoMovimientoORM.ENTRADA
+        )
+        db.add(nuevo_mov)
+        db.commit()
+        db.refresh(nuevo_mov)
+        print(f"✅ Cantidad: {nuevo_mov.cantidad}, Fecha: {nuevo_mov.fecha}, Tipo: {nuevo_mov.tipo}")
+    except Exception as e:
+        db.rollback()
+        print("❌ Ocurrió un error:", e)
+    finally:
+        db.close()
+
+
 if __name__ == "__main__":
+    print("Iniciando inserciones de prueba...")
     insertarProducto()
-    
-#Para ejecutar el script: python -m app.console.script
-    
-"""
-def init_db():
-    print("Creando las tablas en la base de datos...")
-    Base.metadata.create_all(bind=engine)
-    print("Tablas creadas con éxito.")
+    insertar_movimiento()
+
+
+
+# Este bloque asegura que la función solo se ejecute cuando el archivo se corra directamente
+#if __name__ == "__main__":
+    #insertarProducto()
 
 # ----------------- Funciones de Inserción de Datos -----------------
-
+""""
 def insertar_datos_iniciales():
     db: Session = SessionLocal()
     try:
